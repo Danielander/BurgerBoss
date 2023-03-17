@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Boss</title>
+    <link rel="stylesheet" href="pedido.css">
+    <link rel="icon" type="img/x-icon" href="img/daniela hambuerg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kadwa&family=Tilt+Prism&display=swap" rel="stylesheet">
+    
+  </head>
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ background-color:rgba(241, 203, 100, 0.991);
+       
+}   
+.header {
+background-color: rgb(240, 218, 120);
+padding: 20px;
+text-align: center;  
+color: beige;
+} 
+  
+footer {
+text-align: center;
+padding: 10px;
+width: 1550px ;
+ background: rgb(255, 235, 123);
+ opacity: 0.9;
+color: beige;
+ }   
+    
+ * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+
+  background-color:rgb(216, 216, 195);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+    background: rgb(198, 168, 143);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #daeca7;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+.row{
+ 
+justify-content: center;
+padding-left: 8px;
+}
+
+
+h1{
+  color: #6f8043;
+  font-family: 'Kadwa', serif;
+}
+
+.row{
+  font-size: 15px;
+  color: green;
+  font-family: 'Kadwa', serif;
+}
+
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+
+}
+
+.persi{
+color: beige;    
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}   
+
+button{
+   border-radius: 5px;
+   border: 1px solid rgb(209, 249, 186);
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+    background-color: rgb(145, 186, 83);
+    font-weight: bold;
+    color: green;
+    font-family: 'Kadwa', serif;
+}
+
+button:hover{
+    background-color: rgba(0, 128, 0, 0.868);
+    color: white;
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+</style>
+
+
+<body>
+<div class="header">
+    <img style="width: 70%;" src="img/daniela hambuerg.png">
+</div> 
+ <br>
+
+<div class="container">
+    <form action="/action_page.php">
+<h1 style="text-align: center;">Personal Information</h1>
+      <div class="row">
+    <div class="col-25">
+    <label for="fname"><img src="img/0user.png"> Nome Completo</label>
+    </div>
+
+    <div class="col-75">
+    <input type="text" id="fname" name="firstname" placeholder="Nome Completo" required>
+    </div>
+
+</div>
+
+
+
+ <div class="row">
+ <div class="col-25">
+ <label for="lname"><img src="img/call.png"> Telefone</label>
+ </div>
+ <div class="col-75">
+ <input type="text" id="lname" name="lastname" placeholder="Telefone" required>
+</div>
+
+</div>
+<div class="row">
+  
+  <h1 style="padding-top: 1em ;text-align: center;">My Order</h1>
+
+<div class="row">
+<div class="col-25">
+<img src="img/burger (1).png">
+<label >Lunchs: *</label>
+</div>
+<div class="col-75">
+<select name="country">
+<option id="australia"></option>
+<option id="MQ">Misto Quente</option>
+ <option id="BB">Big Bomba</option>
+ <option id="TB">Tudo Boss</option>
+ <option id="TF">Tudo de Frango</option>
+ <option id="BBS">Brocado Boss</option>        
+</select>
+
+</div>
+<div class="row">
+
+<div class="col-75">
+  <input type="text" id="QtdLU" name="qtd" placeholder="Quantidade" required>
+  </div>
+  <div class="col-25">
+    <label for="qtdLU"></label>
+    </div>  
+</div>
+</div>
+<br>      
+
+</div>
+<div class="row">
+<div class="col-25">
+  <img src="img/cocktail (1).png">
+<label for="Dr">Drinks:*</label>
+</div>
+<div class="col-75">
+<select name="wasi">
+<option id="australia"></option>
+<option id="CH">Cerveja Heineken</option>
+ <option id="RL">Refrigerante de lata</option>
+ <option id="SM">Suco Maracuja</option>
+ <option id="SL">Suco Laranja</option>
+ <option id="SLM">Suco Lemon</option>
+
+</select>    
+
+</div>
+<div class="row">
+
+<div class="col-75">
+<input type="text" id="qtdDr" name="qtd" placeholder="Quantidade" required>
+<div class="col-25">
+  <label for="qtdDr"></label>
+  </div> 
+    
+<br>
+
+
+</div>
+</form>
+<div>
+  <button id="button">Finish it</button>
+</div>
+<br>
+<br>
+<div id="resultado">
+  <h4><img src="img/coin.png"> Valor a ser pago:</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+  
+
+
+<br>
+</div>
+<footer>
+<div class="f">
+  <img src="img/facebook (1).png">
+  <img src="img/email (1).png">
+  <img src="img/instagram (2).png">
+  <img src="img/location (1).png">
+  <p style="color:white;">For more information:<br>
+  <a href="mailto:ccaterina.dm@gmail.com" style="color:black; text-decoration:none">ccaterina.dm@gmail.com</a></p>
+</div>
+</footer>
+
+
+<script src="finale.js"></script>  
+
+</body>
+</html>

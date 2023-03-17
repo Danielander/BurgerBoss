@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kadwa&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link rel="icon" type="img/x-icon" href="img/daniela hambuerg.png">    
+<title>Burger Boss</title>
+</head>
+<style>
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+    ul{
+    list-style-type: none;   
+    margin: 0; 
+    padding: 0;
+    overflow:hidden;
+    background-color: rgb(202, 133, 73);
+    }
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color:rgba(252, 193, 74, 0.955);
+
+    color: rgb(98, 23, 23);
+    }
+
+.lela{
+text-shadow:4px 4px 4px rgb(163, 89, 41);  
+font-size: x-large; 
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+background-color:rgba(252, 193, 74, 0.955);
+
+ display:block;
+ /*color:rgb(0, 187, 12);*/
+
+ margin:auto;
+ padding: 15px;
+
+ text-align:center;
+  
+}
+
+.op{
+list-style-type: none;
+margin: 5;
+padding: 5;
+width: 600px;
+   
+display: block;
+padding: 8px 16px;
+text-decoration: none;
+}
+
+/* Change the link color on hover 
+.lela:hover {
+color: rgb(203, 86, 28);
+}
+*/
+</style>    
+<body style="background-color:rgba(214, 139, 34, 0.78);">
+<div class="lela"> 
+<img src="img/daniela hambuerg.png" style="  width: 350px;">      
+</div>
+
+    <ul>
+      <div class="dropdown">
+        <li><a href="#"><button class="dropbtn"><img src="img/home (2).png">
+        </button></a></li></div>
+        <li><a href="file:///C:/Users/ccate/Desktop/FINALE/drink.html">Catalogo</a></li>
+        <li><a href="#Sobre Nós">Galery</a></li>
+        <li><a href="#contactd">Order Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#Sobre bNós">About us</a></li>
+
+      </ul>   
+<br>
+
+<h2>SPECIAL JOURNEY WEEK</h2>
+
+
+<br>
+
+<center>
+<div class="card">
+  <img src="https://i.pinimg.com/564x/41/e1/7e/41e17e1e83b1e06b843906374b23f3cc.jpg" style="width:90%" >
+  <div class="container">
+    <h4><b>Boss Cheesse</b></h4> 
+    <p>With extra cheesse</p> 
+  </div>
+
+</div>
+<div class="card">
+  <img src="https://i.pinimg.com/236x/52/16/9a/52169a45bf2f16ba7f0b0fb20ea7c7dd.jpg"  style="width:100%">
+  <div class="container">
+    <h4><b>Omega Boss</b></h4> 
+    <p>Sorprise</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://i.pinimg.com/236x/1d/0b/48/1d0b489dd8a2ca7ae7da470c7efbf114.jpg" style="width:95%">
+  <div class="container" >
+    <h4><b>Special Boss</b></h4> 
+    <p>To special people</p> 
+  </div>
+</div>
+</center>
+
+<br>
+
+<center>
+
+ <h2>Offer Drinks!</h2> 
+<div class="slideshow-container">
+
+   <div class="mySlides fade">
+     <div class="numbertext">1 / 3</div>
+     <img src="https://i.pinimg.com/564x/e2/83/01/e28301384749cab8372175c697552ec2.jpg" style="width:70%">
+     <div class="text">Cookies and cream</div>
+   </div>
+   
+   <div class="mySlides fade">
+     <div class="numbertext">2 / 3</div>
+     <img src="https://i.pinimg.com/564x/9d/e8/f0/9de8f042c9e11c35939db2398d72bc45.jpg" style="width:70%">
+     <div class="text">Morango Mix</div>
+   </div>
+   
+   <div class="mySlides fade">
+     <div class="numbertext">3 / 3</div>
+     <img src="https://i.pinimg.com/564x/c6/4e/49/c64e498ceef5dc901281771ba1d4c6e7.jpg" style="width:70%">
+     <div class="text">Pina Colada</div>
+   </div>
+   </div>
+ <br>
+   
+   <div style="text-align:center">
+   <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>    
+</div>
+</div>
+   
+<script>
+   let slideIndex = 0;
+   showSlides();
+   
+   function showSlides() {
+     let i;
+     let slides = document.getElementsByClassName("mySlides");
+     let dots = document.getElementsByClassName("dot");
+     for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+     }
+     slideIndex++;
+     if (slideIndex > slides.length) {slideIndex = 1}    
+     for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+     }
+     slides[slideIndex-1].style.display = "block";  
+     dots[slideIndex-1].className += " active";
+     setTimeout(showSlides, 2000); // Change image every 10 seconds
+   }
+   </script>
+</center>
+
+
+
+
+<br>
+<img src="https://i.pinimg.com/originals/43/e1/c2/43e1c20c93b24a7ac41ac8e022f827fc.gif" alt="le" style="width:60px; height:60px;"></img>  
+<footer>
+<div class="f">
+    <img src="img/facebook (1).png">
+    <img src="img/email (1).png">
+    <img src="img/instagram (2).png">
+    <img src="img/location (1).png">
+    <p style="color:white;">For more information:<br>
+    <a href="mailto:ccaterina.dm@gmail.com" style="color:black; text-decoration:none">ccaterina.dm@gmail.com</a></p>
+  </div>
+  </footer>
+
+</body>
+</html>
